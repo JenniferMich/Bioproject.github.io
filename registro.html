@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>registro</title>
+</head>
+<body>
+  <div class="content-body">
+    <div class="form">
+      <img src="imagenes/cropped-logo-bioproject-199x35.png">
+      <h2 class="fs-title">Registro</h2>
+          <form id="msform" action="../Controlador/guardaUsuario.php" method="post" class="formulario">
+                
+                <input id="nombre" type="text" name="nombre" placeholder="Nombres" required minlength="2"maxlength="30" 
+                pattern="[A-Z][a-z A-Z]*[a-z]" title="No ingrese números ni simbolos" autocomplete="off" />
+  
+                <input id="apellidos" type="text" name="apellidos" placeholder="Apellidos" minlength="5"maxlength="15"required pattern="[A-Z][a-z A-Z]*[a-z]" 
+                title="Solo puede usar letras y numeros con una extencion de entre 5 y 15 caracteres" autocomplete="off"/>
+  
+                <input id="usuario" type="text" name="usuario" placeholder="Usuario" minlength="5"maxlength="15"required pattern="[a-zA-Z0-9]+" 
+                title="Solo puede usar letras y numeros con una extencion de entre 5 y 15 caracteres" autocomplete="off"/>
+  
+                <input id="correo" type="email" name="correo" placeholder="Correo" required minlength="11"maxlength="40"pattern="{8,64}"
+                title="Introduzcaa un correo electronico valido y no mayor a 40 caracteres" autocomplete="off"/>
+  
+                <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña"  required minlength="8"maxlength="50" 
+                pattern="([a-zA-Z][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[0-9][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[#$%&/()=?¡*.;,:+-][A-Za-z0-9#$%&/()=?¡*.;,:+-]*)|([a-zA-Z][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[#$%&/()=?¡*.;,:+-][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[0-9][A-Za-z0-9#$%&/()=?¡*.;,:+-]*)"  
+                title="La contraseña debe de ser de minimo 8 caracteres, comenzar con una letra y debe de contener numeros, simblos y no puede llevar espacios" autocomplete="off"/>
+    
+                <input id="valcontraseña" type="password" name="valcontraseña" placeholder="Confirmar Contraseña" required minlength="8"maxlength="50" 
+                pattern="[A-Za-z0-9#$%&/()=?¡*.;,:+-]*[a-zA-Z][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[0-9][A-Za-z0-9#$%&/()=?¡*.;,:+-]*[#$%&/()=?¡*.;,:+-][A-Za-z0-9#$%&/()=?¡*.;,:+-]*"
+                title="La contraseña debe de ser de minimo 8 caracteres y debe contener letras, numeros, simblos y no puede llevar espacios" autocomplete="off"/>
+                
+                <select name="cargo" id="cargo">
+                  <option value="2">Vendedor</option>
+                  <option value="3">Técnico</option>
+                </select>
+                
+  
+                <button class="button button-block" type="submit">Registrar</button>
+            </form>
+  
+  </div>
+</body>
+</html>
