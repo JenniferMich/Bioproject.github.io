@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+html{
+    height:100%;
+   }
+body {
+    background: -webkit-linear-gradient( #0e6d1e, #9EBF24);
+    background: -o-linear-gradient (#0e6d1e, #9EBF24);
+    background: -moz-linear-gradient( #0e6d1e, #9EBF24);
+    background: linear-gradient( #0e6d1e, #9EBF24);
+    margin:0px !important;
+  }
+
+.content-body{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.form{
+    width:70%;
+    background-color: #101326 !important;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.form h2{
+    color:white;
+}
+.formulario{
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 10px;
+}
+.formulario input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+}
+.formulario input:focus{
+    border-color: #157EBF;
+}
+
+img{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+    margin: 10px; 
+}
+
+.formulario button{
+    width: 100%;
+    border-radius: 20px;
+    background-color: #157EBF;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border-style: none;
+    transition: all .5s linear;
+}
+.formulario button:hover{
+    cursor: pointer;
+    background-color: #0d486d;
+    transition: all .5s linear;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+}
+.formulario select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+}
+/*Modo responsivo */
+@media screen and (max-width:500px) {
+    .content-body{
+        margin:5%;
+    }
+    .formulario{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
