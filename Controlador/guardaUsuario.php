@@ -15,17 +15,25 @@
     $valCon = $_POST['valcontraseña'];
 
     $valC = hash("sha512", $valCon);
+    $tipo_usuario=$_POST ['cargo'];
+
+    if($tipo_usuario==2){
+        $nombre_cargo = "Vendedor";
+    }elseif($tipo_usuario==3){
+        $nombre_cargo = "Técnico";
+    }
 
     $params = array (
         "nombre" => $_POST ['nombre'],
         "apellidos" => $_POST ['apellidos'],
-        "cargo" => $_POST ['cargo'],
+        "cargo" => $nombre_cargo,
         "correo" => $_POST ['correo'],
         "usuario" => $_POST ['usuario'],
         //se guada la variable con la contraseña encritada en el arreglo para madarla al modelo 
         "contra" => $contra,
         "valc" => $valC,
-        "tipo"=>2,    
+        "tipo"=>$_POST ['cargo'],
+           
     );
 // print_r($params)
 
@@ -35,7 +43,6 @@
         $conn = $db->getConnection();
         $sesion = new Modelo($conn);
         
-    
         //llamar a la funcion 'agregausuario'
         list ($valor, $error) = $sesion->agregaUsuario( $params );
         if ( empty( $valor ) ){
